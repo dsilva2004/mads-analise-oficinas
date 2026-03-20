@@ -166,12 +166,3 @@ listarCompras()
 consultarVolumeFaturação()
 exportarParaCSV()
 ```
-
-## Publicacao no PyPI
-
-```bash
-python -m build
-python -m twine check dist/*
-python -m twine upload dist/*
-```
-
