@@ -30,6 +30,7 @@ import json
 from IPython.display import display
 import geopandas as gpd
 from shapely.geometry import Point
+from branca.element import Element
 
 """# "Base de dados"
 """
@@ -519,8 +520,6 @@ def listarCompras(idCompra = None, nifUtilizador = None, nifOficina = None, cate
     display(styled_df)
 
 """# Criar Mapa"""
-
-from branca.element import Element
 
 ponto=[]
 
