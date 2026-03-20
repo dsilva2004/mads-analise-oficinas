@@ -778,7 +778,7 @@ def visualizarEvolucaoDespesas(nifUtilizador=None):
 def exportarParaJSON():
     # Função auxiliar para converter datas em strings
     def converter(obj):
-        if isinstance(obj, (date, dt)):
+        if isinstance(obj, (datetime.date, datetime.datetime)):
             return obj.isoformat()  # formato 'YYYY-MM-DD' ou 'YYYY-MM-DDTHH:MM:SS'
         return obj
 
