@@ -16,14 +16,6 @@ O modulo trabalha em memoria e disponibiliza funcoes para:
 pip install mads-analise-oficinas
 ```
 
-### Desenvolvimento local
-
-```bash
-python -m pip install --upgrade build twine
-python -m build
-python -m twine check dist/*
-```
-
 ## Importacao
 
 ```python
@@ -68,8 +60,7 @@ Parametros:
 - genero: M, F ou Outro
 
 Saida:
-- imprime erros de validacao, ou
-- mensagem de sucesso
+- imprime erros de validacao, ou mensagem de sucesso
 
 #### addCatOficina(categoria, cor)
 Regista uma categoria de oficina com uma cor para uso no mapa.
@@ -79,8 +70,7 @@ Parametros:
 - cor: uma das cores permitidas pelo Folium (ex.: blue, red, green)
 
 Saida:
-- imprime erros de validacao, ou
-- mensagem de sucesso
+- imprime erros de validacao, ou mensagem de sucesso
 
 #### addOficina(nif, nome, categoria, latitude, longitude, morada, cidade, codigoPostal, horario)
 Regista uma oficina.
@@ -122,13 +112,6 @@ Comportamento:
 - usa categoria/cor definida em categoriasOficinas;
 - guarda ficheiro mapa.html;
 - apresenta o mapa no ambiente interativo.
-
-Funcoes auxiliares relacionadas:
-- set_ponto(nome, categoria, lon, lat, cor)
-- del_ponto(nome)
-- lista_pontos()
-- get_gjson()
-- getCorOficina(oficina_nif)
 
 ### Estatisticas
 
