@@ -18,6 +18,8 @@ Explicação: Sistema de registro de compras em oficinas.
 """
 
 import datetime
+from datetime import date, datetime as dt
+import re
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import pandas as pd
@@ -776,7 +778,7 @@ def visualizarEvolucaoDespesas(nifUtilizador=None):
 def exportarParaJSON():
     # Função auxiliar para converter datas em strings
     def converter(obj):
-        if isinstance(obj, (date, datetime)):
+        if isinstance(obj, (date, dt)):
             return obj.isoformat()  # formato 'YYYY-MM-DD' ou 'YYYY-MM-DDTHH:MM:SS'
         return obj
 
