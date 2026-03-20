@@ -33,7 +33,6 @@ setup(
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.9",
@@ -41,5 +40,6 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Topic :: Scientific/Engineering :: Information Analysis",
     ],
+    license="MIT",
     keywords="analytics oficinas automoveis pandas",
 )
