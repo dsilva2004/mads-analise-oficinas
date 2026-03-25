@@ -1,14 +1,14 @@
-# Mads Analise Oficinas
+# MADS Análise Oficinas
 
-Biblioteca Python para gestao e analise de dados de oficinas automoveis.
+Biblioteca Python para gestão e análise de dados de oficinas automóveis.
 
-O modulo trabalha em memoria e disponibiliza funcoes para:
+O modulo trabalha em memória e disponibiliza funções para:
 - registo e listagem de utilizadores, oficinas, categorias e compras;
-- analise estatistica de compras e faturacao;
-- visualizacao em mapa;
-- exportacao para JSON e CSV.
+- análise estatística de compras e faturação;
+- visualização em mapa;
+- exportação para JSON e CSV.
 
-## Instalacao
+## Instalação
 
 ### A partir do PyPI
 
@@ -16,27 +16,27 @@ O modulo trabalha em memoria e disponibiliza funcoes para:
 pip install mads-analise-oficinas
 ```
 
-## Importacao
+## Importação
 
 ```python
 from MadsAnaliseOficinas import *
 ```
 
-Tambem podes importar funcoes especificas:
+Também é possível importar funções específicas:
 
 ```python
 from MadsAnaliseOficinas import addUser, addCatOficina, addOficina, registarCompra
 ```
 
-## Estrutura de dados (em memoria)
+## Estrutura de dados (em memória)
 
-O modulo mantem quatro estruturas globais:
+O módulo mantém quatro estruturas globais:
 - utilizadores (dict)
 - categoriasOficinas (list)
 - oficinas (dict)
 - compras (dict)
 
-Isto significa que os dados existem apenas durante a execucao do programa. Para persistir informacao, usa as funcoes de exportacao.
+Isto significa que os dados existem apenas durante a execução do programa. Para persistir informação, usa as funções de exportação.
 
 ## Fluxo recomendado
 
@@ -53,29 +53,29 @@ Isto significa que os dados existem apenas durante a execucao do programa. Para 
 #### addUser(nome, nif, dataNascimento, genero)
 Regista um utilizador.
 
-Parametros:
+Parâmetros:
 - nome: texto (apenas letras e espacos)
 - nif: texto numerico com 9 digitos
 - dataNascimento: formato YYYY-MM-DD
 - genero: M, F ou Outro
 
-Saida:
-- imprime erros de validacao, ou mensagem de sucesso
+Saída:
+- imprime erros de validação, ou mensagem de sucesso
 
 #### addCatOficina(categoria, cor)
 Regista uma categoria de oficina com uma cor para uso no mapa.
 
-Parametros:
+Parâmetros:
 - categoria: texto com pelo menos 3 caracteres
 - cor: uma das cores permitidas pelo Folium (ex.: blue, red, green)
 
-Saida:
+Saída:
 - imprime erros de validacao, ou mensagem de sucesso
 
 #### addOficina(nif, nome, categoria, latitude, longitude, morada, cidade, codigoPostal, horario)
 Regista uma oficina.
 
-Validacoes relevantes:
+Validações relevantes:
 - nif unico com 9 digitos
 - categoria tem de existir em categoriasOficinas
 - latitude entre -90 e 90
@@ -85,7 +85,7 @@ Validacoes relevantes:
 #### registarCompra(nifUtilizador, nifOficina, valor, descricao, dataCompra, catCompra)
 Regista uma compra associada a utilizador e oficina.
 
-Parametros-chave:
+Parâmetros-chave:
 - dataCompra: YYYY-MM-DD
 - catCompra: P (Produto) ou S (Servico)
 
@@ -96,7 +96,7 @@ Regras:
 
 ### Listagens
 
-As funcoes de listagem apresentam tabelas com pandas e IPython.display:
+As funções de listagem apresentam tabelas com pandas e IPython.display:
 - listarCategorias()
 - listarOficinas(nif=None, nome=None, categoria=None, cidade=None)
 - listarUtilizador(nif=None, nome=None, genero=None)
@@ -113,7 +113,7 @@ Comportamento:
 - guarda ficheiro mapa.html;
 - apresenta o mapa no ambiente interativo.
 
-### Estatisticas
+### Estatísticas
 
 - verTotalOficinas(): total de oficinas registadas
 - verTotalUtilizadores(): total de utilizadores registados
@@ -122,7 +122,7 @@ Comportamento:
 - listasVolumeVendas(top=10): ranking de oficinas por volume de vendas
 - visualizarEvolucaoDespesas(nifUtilizador=None): grafico temporal das despesas
 
-### Exportacao
+### Exportação
 
 - exportarParaJSON(): exporta os dados para dados_exportados.json
 - exportarParaCSV(): exporta para
