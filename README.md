@@ -60,7 +60,7 @@ Parâmetros:
 - genero: M, F ou Outro
 
 Saída:
-- imprime erros de validação, ou mensagem de sucesso
+- imprime erros de validação, ou mensagem de sucesso.
 
 #### addCatOficina(categoria, cor)
 Regista uma categoria de oficina com uma cor para uso no mapa.
