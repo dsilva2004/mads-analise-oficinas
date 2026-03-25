@@ -6,7 +6,7 @@ O modulo trabalha em memória e disponibiliza funções para:
 - registo e listagem de utilizadores, oficinas, categorias e compras;
 - análise estatística de compras e faturação;
 - visualização em mapa;
-- exportação para JSON e CSV.
+- exportação para JSON e CSV
 
 ## Instalação
 
